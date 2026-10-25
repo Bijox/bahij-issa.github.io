@@ -1,55 +1,67 @@
-# Bahij Issa — Portfolio
+# Bahij Issa | Personal Portfolio
 
-A static, multi-page portfolio based on BootstrapMade's Personal template.
-There is no package manager, compilation step, or JavaScript framework.
+My personal portfolio website, where I share information about myself, my professional background, and the work I have done in business and data analysis.
 
-## Structure
+I’m building this space to bring my experience and projects together, explain the problems I’ve worked on, and show how I approach turning data into useful insights and business decisions.
 
-- `index.html`: personalized home page and animated role description.
-- `about.html`, `resume.html`, `portfolio.html`, `contact.html`: main content pages.
-- `portfolio-details.html`, `services.html`, `service-details.html`: template project and service pages.
-- `starter-page.html`: template for adding a page.
-- `assets/css/main.css`: shared styles, including theme variables near the top.
-- `assets/js/main.js`: navigation, scroll behavior, animations, sliders, and portfolio filtering.
-- `assets/img/`: profile, background, project, and other images.
-- `assets/vendor/`: bundled third-party libraries; prefer making custom changes in the shared CSS/JS files.
-- `assets/scss/`: explanatory text only; Sass sources are not included.
-- `forms/contact.php`: contact endpoint requiring an additional PHP email library.
+## What you’ll find
 
-Each page loads its own copies of the shared navigation/footer markup and references
-the same styles and scripts. Navigation changes must currently be repeated across pages.
+- **About me** — an introduction to my background, interests, and professional focus.
+- **Resume** — my education, experience, and skills.
+- **Portfolio** — selected projects and work, with space to explain the problem, approach, and results.
+- **Contact** — ways to connect with me about opportunities and collaborations.
 
-## Local preview
+The website is a work in progress. I’m updating the original template with my own content and adding projects as the portfolio develops. Some pages still contain placeholder content.
 
-From this directory:
+## Built with
+
+- HTML5 and CSS3
+- JavaScript
+- Bootstrap 5 for responsive layouts
+- Bootstrap Icons, AOS, Typed.js, Swiper, GLightbox, and Isotope for icons and interactive features
+
+This is a static website with no build step or package installation required.
+
+## Preview locally
+
+Clone the repository and start a local server:
 
 ```sh
+git clone https://github.com/Bijox/bahij-issa.github.io.git
+cd bahij-issa.github.io
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000`. This serves the static site; it does not execute PHP.
-Most pages still contain template names, sample contact details, and placeholder copy.
-Review these before publishing.
+Open [localhost:8000](http://localhost:8000) in your browser. If you already have the project open, run only the last command from the project folder. Save your changes and refresh the browser to see updates.
 
-## Contact form
+## Project structure
 
-The form cannot send email as checked in. `forms/contact.php` expects
-`assets/vendor/php-email-form/php-email-form.php`, which is not included, and its
-recipient is still `contact@example.com`. The bundled `validate.js` only handles
-the browser-side submission and response display.
+```text
+├── index.html              # Home page
+├── about.html              # Background and introduction
+├── resume.html             # Experience, education, and skills
+├── portfolio.html          # Project gallery
+├── portfolio-details.html  # Project detail template
+├── contact.html            # Contact page
+├── services.html           # Services template
+├── service-details.html    # Service detail template
+├── starter-page.html       # Template for additional pages
+├── assets/
+│   ├── css/main.css        # Shared styles
+│   ├── js/main.js          # Shared interactions
+│   ├── img/                # Images and project visuals
+│   └── vendor/             # Third-party libraries
+└── forms/                  # PHP contact form handler and setup notes
+```
 
-To enable sending, provide the required library and configure the recipient and
-mail transport on PHP-capable hosting, or replace the endpoint with a form service.
-Keep credentials out of public files and add server-side validation and spam protection.
-Static hosting alone cannot run this PHP endpoint.
+## Contact
 
-## Suggested next improvements
+- [LinkedIn](https://www.linkedin.com/in/bahij-issa/)
+- [GitHub](https://github.com/Bijox)
+- [Email](mailto:bahijissa8@gmail.com)
 
-1. Personalize all pages and make their navigation consistent with the home page.
-2. Configure and verify contact delivery before presenting the form as working.
-3. Give content images meaningful alternative text and form fields visible labels.
-4. If the site grows, use shared layout templates to avoid duplicating headers and footers.
-5. Load optional vendor libraries only on pages that use them, updating their shared
-   JavaScript initialization at the same time.
+The website’s contact form is not configured yet. Its PHP handler requires an email library that is not included, plus a configured recipient and mail transport. The Python preview server and GitHub Pages do not execute PHP; email is the current direct contact option.
 
-Preserve the original template attribution and consult `Readme.txt` for its license link.
+## Credits
+
+Based on the [Personal template by BootstrapMade](https://bootstrapmade.com/personal-free-resume-bootstrap-template/). Original template attribution is retained. See the [template license](https://bootstrapmade.com/license/) for usage terms.
