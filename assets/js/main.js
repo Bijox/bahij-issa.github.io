@@ -120,12 +120,16 @@
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
+    // Keep the HTML text as a fallback, then clear it before animation starts.
+    selectTyped.textContent = '';
     new Typed('.typed', {
-      strings: typed_strings,
+      strings: typed_strings.map(item => item.trim()),
+      contentType: 'text',
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+      smartBackspace: false,
+      typeSpeed: 40,
+      backSpeed: 20,
+      backDelay: 1200
     });
   }
 
